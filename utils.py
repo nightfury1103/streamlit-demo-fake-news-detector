@@ -30,6 +30,4 @@ def text_preprocessing(text):
     # Remove stopwords
     tokens_without_sw = [word for word in text_tokens if word not in stop_words]
 
-    cleaned_text = ' '.join(tokens_without_sw)
-
-    return cleaned_text
+    return ' '.join(tokens_without_sw)

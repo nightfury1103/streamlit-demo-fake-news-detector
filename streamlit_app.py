@@ -31,7 +31,7 @@ def main():
         with open(model_dir, "rb") as f:
             model = pickle.load(f)
             model_dict[model_name] = model
-        
+
     with open("models/tfidf_vectorizer.pkl", "rb") as f:
         tfidf_vectorizer = pickle.load(f)
 
@@ -62,7 +62,7 @@ def main():
                 cleaned_news = text_preprocessing(news)
 
                 text_vectorized = tfidf_vectorizer.transform([cleaned_news])
-                
+
                 pred = model.predict(text_vectorized)[0]
 
                 if pred == 1:
